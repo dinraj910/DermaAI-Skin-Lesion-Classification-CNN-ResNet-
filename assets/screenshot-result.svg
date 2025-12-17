@@ -1,0 +1,51 @@
+<svg width="1200" height="675" viewBox="0 0 1200 675" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="brand" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#0066CC"/>
+      <stop offset="1" stop-color="#00A6E0"/>
+    </linearGradient>
+    <filter id="shadow" x="-20" y="-20" width="1240" height="715" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#000" flood-opacity="0.16"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="675" rx="28" fill="#F8F9FA"/>
+
+  <!-- Top nav -->
+  <rect x="40" y="32" width="1120" height="70" rx="18" fill="url(#brand)"/>
+  <text x="70" y="77" font-family="Segoe UI, Inter, Arial" font-size="22" font-weight="800" fill="white">DermaAI</text>
+  <text x="980" y="77" font-family="Segoe UI, Inter, Arial" font-size="14" font-weight="600" fill="rgba(255,255,255,0.9)">Home  Features  About</text>
+
+  <!-- Two-column results layout -->
+  <g filter="url(#shadow)">
+    <rect x="70" y="140" width="520" height="470" rx="22" fill="white"/>
+    <rect x="620" y="140" width="510" height="470" rx="22" fill="white"/>
+  </g>
+
+  <!-- Left image mock -->
+  <rect x="105" y="175" width="450" height="400" rx="18" fill="#E9ECEF"/>
+  <circle cx="330" cy="375" r="78" fill="#DDE3EA"/>
+  <path d="M250 420c20-35 40-52 80-52 40 0 60 17 80 52" stroke="#C5CCD6" stroke-width="10" stroke-linecap="round"/>
+
+  <!-- Right result info -->
+  <text x="660" y="200" font-family="Segoe UI, Inter, Arial" font-size="22" font-weight="800" fill="#1A1A2E">Analysis Result</text>
+
+  <!-- Diagnosis badge -->
+  <text x="660" y="240" font-family="Segoe UI, Inter, Arial" font-size="12" font-weight="800" fill="#A0AEC0" letter-spacing="1">DIAGNOSIS</text>
+  <rect x="660" y="255" width="430" height="70" rx="14" fill="#D4EDDA"/>
+  <circle cx="700" cy="290" r="18" fill="#28A745"/>
+  <path d="M692 290l6 6 10-14" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="735" y="298" font-family="Segoe UI, Inter, Arial" font-size="22" font-weight="800" fill="#155724">Benign</text>
+
+  <!-- Confidence -->
+  <text x="660" y="370" font-family="Segoe UI, Inter, Arial" font-size="12" font-weight="800" fill="#A0AEC0" letter-spacing="1">CONFIDENCE SCORE</text>
+  <text x="660" y="415" font-family="Segoe UI, Inter, Arial" font-size="34" font-weight="900" fill="#0066CC">93.5%</text>
+  <rect x="660" y="435" width="430" height="18" rx="9" fill="#E9ECEF"/>
+  <rect x="660" y="435" width="402" height="18" rx="9" fill="#28A745"/>
+
+  <!-- Recommendation -->
+  <text x="660" y="500" font-family="Segoe UI, Inter, Arial" font-size="12" font-weight="800" fill="#A0AEC0" letter-spacing="1">RECOMMENDATION</text>
+  <rect x="660" y="515" width="430" height="85" rx="14" fill="#D1ECF1"/>
+  <text x="680" y="548" font-family="Segoe UI, Inter, Arial" font-size="14" font-weight="700" fill="#0C5460">Assistive result.</text>
+  <text x="680" y="572" font-family="Segoe UI, Inter, Arial" font-size="12" fill="#0C5460">Always confirm with a dermatologist for diagnosis & treatment.</text>
+</svg>

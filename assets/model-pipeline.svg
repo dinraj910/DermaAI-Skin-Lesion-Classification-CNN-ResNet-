@@ -1,0 +1,51 @@
+<svg width="1200" height="360" viewBox="0 0 1200 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="brand" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#0066CC"/>
+      <stop offset="1" stop-color="#00A6E0"/>
+    </linearGradient>
+    <filter id="shadow" x="-20" y="-20" width="1240" height="400" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#000" flood-opacity="0.14"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="360" rx="28" fill="#F8F9FA"/>
+
+  <text x="60" y="80" font-family="Segoe UI, Inter, Arial" font-size="26" font-weight="900" fill="#1A1A2E">End-to-end Pipeline</text>
+  <text x="60" y="112" font-family="Segoe UI, Inter, Arial" font-size="14" fill="#718096">Upload → Preprocess → ResNet-CNN → Probability → Clinical-style Report</text>
+
+  <g filter="url(#shadow)">
+    <rect x="60" y="150" width="240" height="150" rx="18" fill="white"/>
+    <rect x="330" y="150" width="240" height="150" rx="18" fill="white"/>
+    <rect x="600" y="150" width="240" height="150" rx="18" fill="white"/>
+    <rect x="870" y="150" width="270" height="150" rx="18" fill="white"/>
+  </g>
+
+  <!-- Boxes -->
+  <rect x="85" y="175" width="50" height="50" rx="14" fill="url(#brand)" opacity="0.18"/>
+  <text x="150" y="205" font-family="Segoe UI, Inter, Arial" font-size="18" font-weight="800" fill="#1A1A2E">Upload</text>
+  <text x="150" y="232" font-family="Segoe UI, Inter, Arial" font-size="13" fill="#718096">Image (JPG/PNG)</text>
+
+  <rect x="355" y="175" width="50" height="50" rx="14" fill="url(#brand)" opacity="0.18"/>
+  <text x="420" y="205" font-family="Segoe UI, Inter, Arial" font-size="18" font-weight="800" fill="#1A1A2E">Preprocess</text>
+  <text x="420" y="232" font-family="Segoe UI, Inter, Arial" font-size="13" fill="#718096">Resize 224×224, normalize</text>
+
+  <rect x="625" y="175" width="50" height="50" rx="14" fill="url(#brand)" opacity="0.18"/>
+  <text x="690" y="205" font-family="Segoe UI, Inter, Arial" font-size="18" font-weight="800" fill="#1A1A2E">ResNet CNN</text>
+  <text x="690" y="232" font-family="Segoe UI, Inter, Arial" font-size="13" fill="#718096">Inference (TF/Keras)</text>
+
+  <rect x="895" y="175" width="50" height="50" rx="14" fill="url(#brand)" opacity="0.18"/>
+  <text x="960" y="205" font-family="Segoe UI, Inter, Arial" font-size="18" font-weight="800" fill="#1A1A2E">Report</text>
+  <text x="960" y="232" font-family="Segoe UI, Inter, Arial" font-size="13" fill="#718096">Label + confidence + guidance</text>
+
+  <!-- Arrows -->
+  <path d="M300 225h30" stroke="#00A6E0" stroke-width="6" stroke-linecap="round"/>
+  <path d="M570 225h30" stroke="#00A6E0" stroke-width="6" stroke-linecap="round"/>
+  <path d="M840 225h30" stroke="#00A6E0" stroke-width="6" stroke-linecap="round"/>
+  <path d="M330 225l-10-10" stroke="#00A6E0" stroke-width="6" stroke-linecap="round"/>
+  <path d="M330 225l-10 10" stroke="#00A6E0" stroke-width="6" stroke-linecap="round"/>
+  <path d="M600 225l-10-10" stroke="#00A6E0" stroke-width="6" stroke-linecap="round"/>
+  <path d="M600 225l-10 10" stroke="#00A6E0" stroke-width="6" stroke-linecap="round"/>
+  <path d="M870 225l-10-10" stroke="#00A6E0" stroke-width="6" stroke-linecap="round"/>
+  <path d="M870 225l-10 10" stroke="#00A6E0" stroke-width="6" stroke-linecap="round"/>
+</svg>

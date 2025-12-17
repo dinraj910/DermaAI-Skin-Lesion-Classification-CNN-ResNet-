@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analysis Results - DermaAI</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-gradient sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold" href="/">
+        <i class="fas fa-stethoscope"></i> DermaAI
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="/#features">Features</a></li>
+          <li class="nav-item"><a class="nav-link" href="/#how-it-works">How It Works</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Results Section -->
+  <section class="results-section">
+    <div class="container">
+      <div class="row">
+        <!-- Image Display -->
+        <div class="col-lg-6 mb-4">
+          <div class="card result-image-card shadow-lg">
+            <div class="card-body p-0">
+              <img src="/{{ image }}" class="img-fluid rounded" alt="Analyzed Image">
+            </div>
+          </div>
+        </div>
+
+        <!-- Results Display -->
+        <div class="col-lg-6">
+          <div class="card result-info-card shadow-lg">
+            <div class="card-body p-5">
+              <h3 class="card-title mb-4">Analysis Result</h3>
+              
+              <!-- Diagnosis Badge -->
+              <div class="diagnosis-section mb-5">
+                <label class="text-muted small">DIAGNOSIS</label>
+                <div class="diagnosis-badge {% if label == 'Malignant' %}malignant{% else %}benign{% endif %}">
+                  <i class="fas {% if label == 'Malignant' %}fa-exclamation-circle{% else %}fa-check-circle{% endif %}"></i>
+                  <span>{{ label }}</span>
+                </div>
+              </div>
+
+              <!-- Confidence Meter -->
+              <div class="confidence-section mb-5">
+                <label class="text-muted small">CONFIDENCE SCORE</label>
+                <div class="confidence-display">
+                  <h2 class="mb-3">{{ confidence }}</h2>
+                  <div class="progress" style="height: 20px;">
+                    <div class="progress-bar {% if label == 'Malignant' %}bg-danger{% else %}bg-success{% endif %}" 
+                         role="progressbar" style="width: {{ confidence | replace('%', '') }}%" 
+                         aria-valuenow="{{ confidence | replace('%', '') }}" aria-valuemin="0" aria-valuemax="100">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Recommendation -->
+              <div class="recommendation-section mb-5">
+                <label class="text-muted small">RECOMMENDATION</label>
+                <div class="alert {% if label == 'Malignant' %}alert-warning{% else %}alert-info{% endif %}" role="alert">
+                  {% if label == 'Malignant' %}
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <strong>Urgent:</strong> This lesion shows characteristics of malignancy. 
+                    <strong>Immediate consultation with a dermatologist is strongly recommended.</strong>
+                  {% else %}
+                    <i class="fas fa-info-circle"></i>
+                    This lesion appears to be benign. However, regular monitoring is advised. 
+                    Consult a healthcare professional for a definitive diagnosis.
+                  {% endif %}
+                </div>
+              </div>
+
+              <!-- Information Box -->
+              <div class="info-box mb-5 p-4 rounded">
+                <h6 class="mb-3"><i class="fas fa-lightbulb"></i> Important Notice</h6>
+                <p class="small mb-0">This AI analysis is an assistive tool and should not replace professional medical diagnosis. Always consult with a qualified dermatologist for accurate diagnosis and treatment planning.</p>
+              </div>
+
+              <!-- Action Buttons -->
+              <div class="d-grid gap-2 d-sm-flex">
+                <a href="/" class="btn btn-primary btn-lg flex-sm-fill">
+                  <i class="fas fa-plus"></i> Analyze Another Image
+                </a>
+                <button class="btn btn-outline-secondary btn-lg flex-sm-fill" onclick="window.print()">
+                  <i class="fas fa-print"></i> Print Report
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer mt-5">
+    <div class="container">
+      <hr class="bg-white mb-4">
+      <div class="text-center">
+        <p>&copy; 2025 DermaAI. All rights reserved.</p>
+        <p class="small">This tool is for educational and assistive purposes. Always consult with a qualified healthcare professional.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
