@@ -53,9 +53,9 @@ env/
 # =========================
 # TensorFlow / Keras
 # =========================
-# *.h5
-# *.weights.h5
-# *.keras
+*.h5
+*.weights.h5
+*.keras
 logs/
 tensorboard/
 
