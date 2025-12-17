@@ -53,23 +53,23 @@ It’s designed to show real-world skills: **CNN/ResNet inference**, **medical-i
 > These screenshots are included as **portfolio visuals** (SVG mockups) to keep the repo lightweight and attractive on GitHub.
 
 ### Home / Upload Experience
-![DermaAI Result](screenshots\1.png)
+![DermaAI Result](screenshots/1.png)
 
-![DermaAI Result](screenshots\2.png)
+![DermaAI Result](screenshots/2.png)
 
-![DermaAI Result](screenshots\3.png)
+![DermaAI Result](screenshots/3.png)
 
-![DermaAI Result](screenshots\4.png)
+![DermaAI Result](screenshots/4.png)
 
-![DermaAI Result](screenshots\5.png)
+![DermaAI Result](screenshots/5.png)
 
-![DermaAI Result](screenshots\6.png)
+![DermaAI Result](screenshots/6.png)
 
 ### Result Page (Diagnosis + Confidence)
 
-![DermaAI Result](screenshots\7.png)
+![DermaAI Result](screenshots/7.png)
 
-![DermaAI Result](screenshots\8.png)
+![DermaAI Result](screenshots/8.png)
 
 
 ---
